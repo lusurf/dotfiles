@@ -1,0 +1,7 @@
+--languages=-javascript
+--exclude=_meta
+--exclude=pkg
+--exclude=dist
+--exclude=deps
+--exclude=_deps
+--python-kinds=-i
