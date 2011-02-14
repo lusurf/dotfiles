@@ -1,0 +1,7 @@
+# Automatically log in to this mailbox at startup
+set spoolfile="imap://orenhe@localhost/"
+# Define the = shortcut, and the entry point for the folder browser (c?)
+set folder="imap://orenhe@localhost/"
+set record="=Sent"
+set postponed="=Drafts"
+set smtp_url="smtp://d06ml310.ibm.com"
