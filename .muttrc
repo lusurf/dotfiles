@@ -1,7 +1,33 @@
 # Automatically log in to this mailbox at startup
-set spoolfile="imap://orenhe@localhost/"
+#set spoolfile="imap://orenhe@localhost/"
 # Define the = shortcut, and the entry point for the folder browser (c?)
-set folder="imap://orenhe@localhost/"
+#set folder="imap://orenhe@localhost/"
 set record="=Sent"
 set postponed="=Drafts"
-set smtp_url="smtp://d06ml310.ibm.com"
+#set smtp_url="smtp://d06ml310.ibm.com"
+
+set ssl_starttls=yes
+set hostname="orenhe-laptop"
+set realname="Oren Held"
+#set from="Oren Held <orenhe@il.ibm.com>"
+set use_from=yes
+
+# View URLs inside Mutt
+macro index \cb   "|urlview\n"
+macro pager \cb   "|urlview\n"
+
+# Base hook to reset account variables to known state before activating new ones
+account-hook . 'unset preconnect imap_user imap_pass imap_authenticators; set ssl_starttls=ask-yes'
+
+#WORK
+account-hook imap://localhost/ 'set imap_user=orenhe'
+folder-hook imap://localhost/ 'set folder=imap://localhost/INBOX record=Sent from="Oren Held <orenhe@il.ibm.com>" smtp_url="smtp://d06ml310.ibm.com"'
+set folder="imap://localhost/"
+mailboxes "=INBOX"
+
+#HOME
+account-hook imap://sub4.mail.dreamhost.com/ 'set imap_user=oren@held.org.il'
+folder-hook imap://sub4.mail.dreamhost.com/ 'set folder=imap://sub4.mail.dreamhost.com/INBOX record=+Sent from="Oren Held <oren@held.org.il>" smtp_url="smtps://oren@held.org.il@sub4.mail.dreamhost.com" ssl_starttls=no'
+set folder="imap://sub4.mail.dreamhost.com/"
+mailboxes "=INBOX"
+
