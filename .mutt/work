@@ -1,0 +1,9 @@
+set folder=imap://localhost/
+set record="=Sent"
+set from="Oren Held <orenhe@il.ibm.com>"
+set postponed="=Drafts"
+set ssl_starttls=no
+set smtp_url="smtp://d06ml310.ibm.com"
+#set trash="imap://localhost/Trash"
+set trash="=Trash"
+mailboxes = =INBOX
