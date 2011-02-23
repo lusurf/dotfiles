@@ -2,8 +2,9 @@ syntax on
 set shiftround
 set hlsearch showmatch
 set sts=4
-set tabstop=4
-set sw=4
+set tabstop=8               " Use industry standard 8-char tabs
+set shiftround              " Indent/Dedent to nearest 4-char boundary
+set shiftwidth=4            " Use standard 4-char indentation
 set tw=120
 set t_Co=256
 set smartcase

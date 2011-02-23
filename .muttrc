@@ -4,15 +4,24 @@
 #set folder="imap://orenhe@localhost/"
 #set smtp_url="smtp://d06ml310.ibm.com"
 
+set pager_stop          # don't move to the next message on next-page
+set sendmail_wait=2     # how long to wait before backgrounding sends
+set forward_format="Fwd: %s"
+set query_command = "/home/orenhe/bin/mutt_ldap_query '%s'"
 set trash="=Trash"
 set hostname="orenhe-laptop"
 set realname="Oren Held"
+set sort="date"
 #set from="Oren Held <orenhe@il.ibm.com>"
 set use_from=yes
 
 # View URLs inside Mutt
 macro index \cb   "|urlview\n"
 macro pager \cb   "|urlview\n"
+
+set editor="vim +':set textwidth=80'"
+
+bind index "^" imap-fetch-mail
 
 # Base hook to reset account variables to known state before activating new ones
 account-hook . 'unset preconnect imap_user imap_pass imap_authenticators trash; set ssl_starttls=ask-yes'
@@ -26,5 +35,6 @@ mailboxes = =INBOX
 #HOME
 account-hook imap://sub4.mail.dreamhost.com/ 'set imap_user=oren@held.org.il'
 folder-hook imap://sub4.mail.dreamhost.com/ 'source ~/.mutt/home'
-set folder=imap://sub4.mail.dreamhost.com/
+set folder=imap://sub4.mail.dreamhost.com/INBOX
 mailboxes = =INBOX
+
