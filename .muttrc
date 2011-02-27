@@ -6,27 +6,24 @@
 
 set mime_forward=ask-yes # prompt: forward as message/rfc822 attachment?
 set pager_stop           # don't move to the next message on next-page
-set sendmail_wait=2      # how long to wait before backgrounding sends
+set edit_headers         # let me edit the message header when composing
 set forward_format="Fwd: %s"
-set query_command = "/home/orenhe/bin/mutt_ldap_query '%s'"
-set trash = "imap://localhost/Trash"
+set query_command = "~/bin/mutt_ldap_query '%s'"
 set hostname="orenhe-laptop"
 set realname="Oren Held"
 set sort="date"
-#set from="Oren Held <orenhe@il.ibm.com>"
 set use_from=yes
 
 # View URLs inside Mutt
 macro index \cb   "|urlview\n"
 macro pager \cb   "|urlview\n"
 
-set editor="vim +':set textwidth=80'"
+set editor="vim +':set textwidth=80' +':set spell'"
 
 bind index "^" imap-fetch-mail
 
 # Base hook to reset account variables to known state before activating new ones
 account-hook . 'unset preconnect imap_user imap_pass imap_authenticators; set ssl_starttls=ask-yes'
-folder-hook . 'unset trash'
 
 #WORK
 account-hook imap://localhost/ 'set imap_user=orenhe ssl_starttls=no'
