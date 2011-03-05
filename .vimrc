@@ -7,6 +7,7 @@ set shiftround              " Indent/Dedent to nearest 4-char boundary
 set shiftwidth=4            " Use standard 4-char indentation
 set tw=120
 set t_Co=256
+set ignorecase
 set smartcase
 set expandtab
 set autoindent smartindent
