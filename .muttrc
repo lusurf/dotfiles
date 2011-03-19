@@ -7,6 +7,7 @@
 set mime_forward=ask-yes # prompt: forward as message/rfc822 attachment?
 set pager_stop           # don't move to the next message on next-page
 set edit_headers         # let me edit the message header when composing
+set delete = yes         # purge deleted messages without asking
 set forward_format="Fwd: %s"
 set query_command = "~/bin/mutt_ldap_query '%s'"
 set hostname="orenhe-laptop"

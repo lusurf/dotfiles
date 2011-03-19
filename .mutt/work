@@ -4,5 +4,4 @@ set from="Oren Held <orenhe@il.ibm.com>"
 set postponed="=Drafts"
 set smtp_url="smtp://d06ml310.ibm.com"
 set trash = "=Trash"
-#set trash="=Trash"
 mailboxes = =INBOX

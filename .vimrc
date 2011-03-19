@@ -22,7 +22,7 @@ set wildignore=*.pyc
 filetype indent on
 filetype plugin on
 
-" tab navigation like firefox
+" tab navigation
 map ,, :tabprev<CR>
 map ,. :tabnext<CR>
 map ,t :tabnew<CR>
@@ -34,11 +34,11 @@ map <c-\> :pop<CR>
 map <c-o> :set paste<CR>
 let ropevim_vim_completion=1
 
-" autocmd
+" Pylint integration (Ctrl+P to manually scan, automatically started when saving files )
+" Requires Pylint plugin, http://www.vim.org/scripts/script.php?script_id=891
 autocmd FileType python compiler pylint
-
 map <c-P> :Pylint<CR>
-let g:pylint_cwindow = 0
+let g:pylint_cwindow = 0 " set to 0 to disable auto 'cwindow' opening, open manually with :cwindow
 
 set nocompatible
 ab pymain if __name__ == "__main__":
