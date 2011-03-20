@@ -2,14 +2,22 @@ syntax on
 set shiftround
 set hlsearch showmatch
 set sts=4
-set tabstop=8               " Use industry standard 8-char tabs
-set shiftround              " Indent/Dedent to nearest 4-char boundary
-set shiftwidth=4            " Use standard 4-char indentation
-set tw=120
+set tabstop=8             " Use industry standard 8-char tabs
+set shiftround            " Indent/Dedent to nearest 4-char boundary
+set shiftwidth=4          " Use standard 4-char indentation
+set textwidth=120
+set colorcolumn=+0        " Highlight the textwidth column
 set t_Co=256
 set ignorecase
-set smartcase
+set smartcase             " When ignorecase is on, ignores case only when no uppercase letters are used.
 set expandtab
+set whichwrap+=<,>,[,]    " Allow left & right keys to move the cursor to the next line when on EOL
+
+" Find bad whitespaces
+highlight BadWhitespace ctermbg=red guisp=red gui=undercurl guifg=NONE guibg=NONE
+match BadWhitespace /^\t\+/
+match BadWhitespace /\s\+$/
+
 set autoindent smartindent
 set incsearch
 let g:zenburn_high_Contrast = 1
@@ -23,11 +31,10 @@ filetype indent on
 filetype plugin on
 
 " tab navigation
-map ,, :tabprev<CR>
-map ,. :tabnext<CR>
-map ,t :tabnew<CR>
-map ,d :tabclose<CR>
-map T :TlistToggle<CR>
+map tj :tabnext<CR>
+map tk :tabprev<CR>
+map tn :tabnew<CR>
+map td :tabclose<CR>
 
 " map <c-]> :tselect<CR>
 map <c-\> :pop<CR>
@@ -38,7 +45,14 @@ let ropevim_vim_completion=1
 " Requires Pylint plugin, http://www.vim.org/scripts/script.php?script_id=891
 autocmd FileType python compiler pylint
 map <c-P> :Pylint<CR>
-let g:pylint_cwindow = 0 " set to 0 to disable auto 'cwindow' opening, open manually with :cwindow
+"let g:pylint_cwindow = 0 " set to 0 to disable auto 'cwindow' opening, open manually with :cwindow
 
 set nocompatible
 ab pymain if __name__ == "__main__":
+
+inoremap <F9> <Esc>:make<CR>
+inoremap <F10> <Esc>:cnext<CR>
+inoremap <S-F10> <Esc>:cprev<CR>
+noremap <F9> <Esc>:make<CR>
+noremap <F10> <Esc>:cnext<CR>
+noremap <S-F10> <Esc>:cprev<CR>
