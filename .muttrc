@@ -15,6 +15,8 @@ set realname="Oren Held"
 set sort="date"
 set use_from=yes
 
+#source $alias_flie
+
 bind pager \eD purge-message   # Esc-D to purge a message (no copy to Trash)
 bind index \eD purge-message   # Esc-D to purge a message (no copy to Trash)
 
@@ -23,7 +25,7 @@ bind index \eD purge-message   # Esc-D to purge a message (no copy to Trash)
 macro index \cb   "|urlview\n"
 macro pager \cb   "|urlview\n"
 
-set editor="vim +':set textwidth=80' +':set spell'"
+set editor="vim +':set textwidth=0' +':set spell'"
 
 bind index "^" imap-fetch-mail
 
