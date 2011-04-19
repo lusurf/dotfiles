@@ -14,6 +14,7 @@ set hostname="orenhe-laptop"
 set realname="Oren Held"
 set sort="date"
 set use_from=yes
+set display_filter=bidiv # BiDi support
 
 #source $alias_flie
 
