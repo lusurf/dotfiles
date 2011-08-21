@@ -112,7 +112,7 @@ au CursorMoved <buffer> call s:GetPylintMessage()
 " it does not list the info messages and it lists errors first
 " pylint --rcfile pylint.rc -i y hola.py|grep -e '^[WECY]'|sed -e 's/^W/2 W /' -e 's/^E/1 E /' -e
 " 's/^C/3 C /' |sort -k1,3
-CompilerSet makeprg=(echo\ '[%]';pylint\ -i\ y\ %\\\|grep\ -e\ \'^[WECY]\'\\\|sed\ -e\ \'s/^E/1\ E\ /\'\ -e\ \'s/^W/2\ W\ /\'\ -e\ \'s/^C/3\ C\ /\'\ -e\ \'s/:[\.\ _a-Z]*:/:/g\'\ \\\|sort\ -k1,3)
+CompilerSet makeprg=(echo\ '[%]';/usr/bin/python2.7\ /usr/bin/pylint\ --rcfile\ ~/.pylintrc\ -i\ y\ %\\\|grep\ -e\ \'^[WECY]\'\\\|sed\ -e\ \'s/^E/1\ E\ /\'\ -e\ \'s/^W/2\ W\ /\'\ -e\ \'s/^C/3\ C\ /\'\ -e\ \'s/:[\.\ _a-Z]*:/:/g\'\ \\\|sort\ -k1,3)
 
 " We could omit end of file-entry, there is only one file
 " %+I... - include code rating information
@@ -121,7 +121,7 @@ CompilerSet makeprg=(echo\ '[%]';pylint\ -i\ y\ %\\\|grep\ -e\ \'^[WECY]\'\\\|se
 "CompilerSet efm=%+P[%f],%t:\ %#%l:%m,%Z,%+IYour\ code%m,%Z,%-G%.%#
 "modified by Jose Blanca
 "version for the sorted and filtered pylint
-CompilerSet efm=%+P[%f],%-GI%n:\ %#%l:%m,%*\\d\ %t\ %n:\ %#%l:%m,%Z,%+IYour\ code%m,%Z,%-G%.%#
+CompilerSet efm=%+P[%f],%*\\d\ %t\ %n:%l\\,%c:%m,%Z,%+IYour\ code%m,%Z,%-G%.%#
 
 ""sings
 "signs definition
