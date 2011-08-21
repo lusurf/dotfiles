@@ -33,15 +33,6 @@ bind index "^" imap-fetch-mail
 # Base hook to reset account variables to known state before activating new ones
 account-hook . 'unset preconnect imap_user imap_pass imap_authenticators; set ssl_starttls=ask-yes'
 
-#WORK
-account-hook imap://localhost/ 'set imap_user=orenhe ssl_starttls=no'
-folder-hook imap://localhost/ 'source ~/.mutt/work'
-set folder=imap://localhost/INBOX
-mailboxes = =INBOX
+source ~/.mutt/accounts
 
-#HOME
-account-hook imap://sub4.mail.dreamhost.com/ 'set imap_user=oren@held.org.il'
-folder-hook imap://sub4.mail.dreamhost.com/ 'source ~/.mutt/home'
-set folder=imap://sub4.mail.dreamhost.com/INBOX
-mailboxes = =INBOX
 
