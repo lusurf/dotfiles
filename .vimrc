@@ -30,10 +30,10 @@ filetype indent on
 filetype plugin on
 
 " tab navigation
-map tj :tabnext<CR>
 map tl :tabnext<CR>
-map tk :tabprev<CR>
+map tk :tabnext<CR>
 map th :tabprev<CR>
+map tj :tabprev<CR>
 map tn :tabnew<CR>
 map td :tabclose<CR>
 
@@ -58,5 +58,5 @@ noremap <F10> <Esc>:cnext<CR>
 noremap <S-F10> <Esc>:cprev<CR>
 
 " Find bad whitespaces
-highlight BadWhitespace ctermbg=red guibg=red
-au WinEnter,BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$\|^\t\+/
+"highlight BadWhitespace ctermbg=red guibg=red
+"au WinEnter,BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$\|^\t\+/
