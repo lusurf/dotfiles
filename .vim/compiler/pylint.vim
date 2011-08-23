@@ -121,7 +121,7 @@ CompilerSet makeprg=(echo\ '[%]';/usr/bin/python2.7\ /usr/bin/pylint\ --rcfile\ 
 "CompilerSet efm=%+P[%f],%t:\ %#%l:%m,%Z,%+IYour\ code%m,%Z,%-G%.%#
 "modified by Jose Blanca
 "version for the sorted and filtered pylint
-CompilerSet efm=%+P[%f],%*\\d\ %t\ %n:%l\\,%c:%m,%Z,%+IYour\ code%m,%Z,%-G%.%#
+CompilerSet efm=%+P[%f],%*\\d\ %t\ %n:\ %#%l\\,%c:%m,%Z,%+IYour\ code%m,%Z,%-G%.%#
 
 ""sings
 "signs definition
