@@ -60,3 +60,5 @@ noremap <S-F10> <Esc>:cprev<CR>
 " Find bad whitespaces
 "highlight BadWhitespace ctermbg=red guibg=red
 "au WinEnter,BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$\|^\t\+/
+
+set cursorline
