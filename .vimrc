@@ -21,7 +21,7 @@ set autoindent smartindent
 set incsearch
 let g:zenburn_high_Contrast = 1
 colorscheme zenburn
-set tags=xxx.tags,~/src/tags
+set tags=xxx.tags,~/dev/tags
 set modeline
 set wildmenu              " Make tab completion for files/buffers act like bash
 set wildmode=longest:full

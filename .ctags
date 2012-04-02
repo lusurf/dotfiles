@@ -1,6 +1,2 @@
 --languages=-javascript
---exclude=*/_meta/*
---exclude=*/dist/*
---exclude=*/deps/*
---exclude=*/_deps/*
 --python-kinds=-i
