@@ -1,7 +1,7 @@
-set folder=imap://localhost/
-set record="=Sent"
-set from="Oren Held <orenhe@il.ibm.com>"
+set folder="imaps://IMAPSERVER"
+#set record="+[Gmail]/Sent Mail"
+set from="NAME <NAME@gmail.com>"
 set postponed="=Drafts"
-set smtp_url="smtp://d06ml310.ibm.com"
+set smtp_url="smtp://MAIL@SMTPSERVER"
 set trash = "=Trash"
 mailboxes = =INBOX

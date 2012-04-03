@@ -1,8 +1,8 @@
-set folder=imap://sub4.mail.dreamhost.com/INBOX
+set folder=imaps://IMAPSERVER/INBOX
 set record="=Sent"
 set postponed="=Drafts"
-set from="Oren Held <oren@held.org.il>"
-set smtp_url="smtps://oren@held.org.il@sub4.mail.dreamhost.com"
+set from="NAME <NAME@gmail.com>"
+set smtp_url="smtps://NAME@gmail.com@SMTPSERVER"
 set trash="=Trash"
 mailboxes = =INBOX
 set signature=''
