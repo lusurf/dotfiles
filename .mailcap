@@ -1,1 +1,3 @@
 application/pdf;/usr/bin/evince %s
+image/jpeg;/usr/bin/eog %s
+application/vnd.openxmlformats-officedocument.presentationml.presentation; ooimpress %s; test=test -n "$DISPLAY"
