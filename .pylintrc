@@ -16,7 +16,7 @@ const-rgx=(([A-Z_][A-Z0-9_]*)|(__.*__))$
 function-rgx=[a-z_][a-z0-9_]{1,50}$
 
 # Regular expression which should only match correct method names
-method-rgx=[a-z_][a-z0-9_]{1,50}$
+method-rgx=([a-z_][a-z0-9_]{1,50}|setUp|tearDown)$
 
 # Regular expression which should only match correct instance attribute names
 attr-rgx=[a-z_][a-z0-9_]{1,50}$
@@ -31,5 +31,5 @@ variable-rgx=[a-z_][a-z0-9_]{1,50}$
 const-rgx=(([a-zA-Z_][a-zA-Z0-9_]*)|(__.*__))$
 
 # Good variable names which should always be accepted, separated by a comma
-good-names=f,i,j,k,ex,Run,_
+good-names=e,f,i,j,k,ex,Run,_
 
