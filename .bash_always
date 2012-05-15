@@ -1,0 +1,4 @@
+export GREP_OPTIONS="--exclude-dir=\.svn"
+export EDITOR=vim
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64
+
